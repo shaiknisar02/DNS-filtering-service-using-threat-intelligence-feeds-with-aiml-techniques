@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+  <title>bootstrap</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Stylesheet-->
+    <style>
+      body {
+        background-image: url('/static/img/black.png');
+        background-size: cover; /* Adjust the image size to cover the whole body */
+        /* Optionally, you can add more properties like background-repeat, background-position, etc. */
+      }
+    </style>
+    
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a style="margin-left: 20px;" class="navbar-brand" href="#">Threat Intelligence DNS Filtering</a>
+
+      <div style="margin-left: 450px;" class="collapse navbar-collapse" id="navbar-text">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'userhome' %}"><b>Home</b> <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item active">
+            <a style="margin-left: 10px;" class="nav-link active" href="{% url 'about' %}"><b>About</b> <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a style="margin-left: 10px;" class="nav-link" href="{% url 'view' %}"><b>View</b></a>
+          </li>
+
+          <li class="nav-item">
+            <a style="margin-left: 10px;" class="nav-link" href="{% url 'module' %}"><b>Module Train</b></a>
+          </li>
+          <li class="nav-item">
+            <a style="margin-left: 10px;" class="nav-link" href="{% url 'prediction' %}"><b>Prediction</b></a>
+          </li>
+          <li class="nav-item">
+            <a style="margin-left: 10px;" class="nav-link" href="{% url 'index' %}"><b>LogOut</b></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+      <section id="hero">
+        <div class="hero-container">
+        <div class="heading">
+        <center><h1 style="color:white;  margin-top: 50px;">About</h1></center>
+        </div>
+        <p style="color:white">
+         <div class="ag-text">
+         <div class="cg-text">
+          <style>
+            /* Styling for the pop-up */
+            .popup {
+              position: fixed;
+              bottom: 0;
+              left: 50%;
+              transform: translate(-50%, 100%);
+              background-color: white;
+              padding: 20px;
+              max-width: 80%;
+              box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+              border-radius: 10px;
+              text-align: center;
+              animation: slideUp 0.5s forwards;
+            }
+            /* Styling for the paragraph */
+            .popup p {
+              color: black;
+              margin: 0;
+            }
+          
+            /* Animation */
+            @keyframes slideUp {
+              0% {
+                transform: translate(-50%, 100%);
+              }
+              100% {
+                transform: translate(-50%, -50%);
+              }
+            }
+          </style>
+          </head>
+          <body>
+          
+          <div class="popup" id="popup">
+            <p align="justify">A Domain Name Server (DNS) filtering service enhances cybersecurity by leveraging Threat Intelligence feeds and Artificial Intelligence and Machine Learning (AIML) techniques. This service operates at the DNS level, intercepting and inspecting DNS queries and responses to identify and mitigate potential threats.By integrating Threat Intelligence feeds, the service constantly updates its database with information about known malicious domains, IP addresses, and other indicators of compromise. This enables real-time detection and blocking of access to malicious sites, preventing users from inadvertently visiting harmful web destinations.
+              <br><br>
+              AIML techniques are employed to analyze DNS traffic patterns and identify anomalous behavior indicative of potential threats, even from previously unknown sources. Machine learning algorithms are trained on vast datasets to recognize patterns associated with malicious activities, enabling proactive threat detection and response.DNS filtering operates transparently, seamlessly redirecting users away from malicious sites without their awareness. It acts as a proactive defense layer, blocking access to malicious content before it reaches the user's device, thereby preventing malware infections, data breaches, and other cyber threats
+              <br><br>
+              Furthermore, DNS filtering enhances productivity by enforcing content policies within organizations. It allows administrators to restrict access to non-work-related or inappropriate websites, ensuring compliance with company policies and regulatory requirements.Overall, a DNS filtering service utilizing Threat Intelligence feeds and AIML techniques provides comprehensive protection against a wide range of cyber threats, enhances security posture, and promotes safe and productive internet usage for individuals and organizations alike.
+              <br><br>
+              <!-- One of the key principles of ethical hacking is confidentiality. Ethical hackers are entrusted with sensitive information about an organization's systems and infrastructure, and they must ensure the confidentiality and integrity of this information throughout the testing process. Moreover, ethical hackers must adhere to strict guidelines regarding the scope and limitations of their testing activities, ensuring that they do not cause disruption or damage to the target systems. -->
+            </p>
+          </div>
+     </section>
+      
+      {% if message %}
+        <script>
+            alert("{{ message }}")        
+        </script>
+      {% endif %}
+</body>
+</html>
+
+
+
+
+
