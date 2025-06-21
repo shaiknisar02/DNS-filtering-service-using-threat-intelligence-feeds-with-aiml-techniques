@@ -1,0 +1,2 @@
+# DNS-filtering-service-using-threat-intelligence-feeds-with-aiml-techniques
+The DNS Filtering project uses AI/ML techniques to detect and prevent malicious domain access. It analyzes DNS data using machine learning classifiers like Decision Tree and Random Forest to identify threats. Integrated with a Django web app, it allows user interaction, prediction visualization, and secure, real-time threat detection.
